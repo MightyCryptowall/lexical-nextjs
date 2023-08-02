@@ -12,6 +12,7 @@ import { CodeNode } from "@lexical/code";
 import { TRANSFORMERS } from "@lexical/markdown";
 
 import { LocalStoragePlugin } from "./plugins/LocalStorage";
+import Toolbar from "./plugins/Toolbar";
 
 
 const EDITOR_NODES = [
@@ -37,6 +38,7 @@ export function LexicalEditor(props: LexicalEditorProps) {
       />
       <LocalStoragePlugin namespace={props.config.namespace}/>
       <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
+      <Toolbar/>
     </LexicalComposer>
   );
 }
