@@ -68,7 +68,7 @@ export function Editor() {
           editorState: content,
           nodes: EDITOR_NODES,
           theme: {
-            root: "p-4 border-slate-500 border-2 rounded h-full min-h-[200px] focus:outline-none focus-visible:border-black",
+            root: "p-4 border-slate-500 border-2 rounded h-full min-h-[200px] focus:outline-none focus-visible:border-black lexcial-wrapper",
             link: "cursor-pointer",
             text: {
               bold: "font-semibold",
@@ -76,7 +76,11 @@ export function Editor() {
               italic: "italic",
               strikethrough: "line-through",
               underlineStrikethrough: "underlined-line-through",
+              
             },
+            heading: {
+              h1: "font-bold text-3xl",
+            }
           },
           onError: (error) => {
             console.log(error);
